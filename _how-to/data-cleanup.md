@@ -12,7 +12,7 @@ This saves a _massive_ amount of space,
 ### Data Cleanup Tool
 
 CryoSPARC has a very good `Data Cleanup Tool`. **Please use it.** Your storage admins (and your own allocation) will thank you!
-![Data Cleanup Tool]({{ site.url }}{{ site.baseurl }}/assets/images/data-cleanup-tool.png)
+![Data Cleanup Tool](/assets/images/data-cleanup-tool.png)
 
 Lots of polished datasets that went through multiple cycles only the first input and the last output in their history: the intermediate data steps in the middle can be re-built simply by `Restart`ing the job. 
 
