@@ -1,0 +1,625 @@
+
+
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.28.0 by Michael Rose
+  Copyright 2013-2026 Michael Rose - mademistakes.com | @mmistakes
+  Copyright 2024-2026 iBug - ibugone.com | @iBug
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js" dir="ltr">
+  <head>
+    
+<meta charset="utf-8">
+
+
+<!-- begin _includes/seo.html --><title>Transfer data with Globus 🌐 - Discworld 🐢❄️</title>
+<meta name="description" content="Globus  🌐📁🔀📁🌐 Globus is the modern, secure, web interface to transfer between between research endpoints. It excels at transferring huge data sets across the network, and it’s the preferred method to bring voluminous datasets onto Discworld">
+
+
+  <meta name="author" content="Keiran Rowell">
+  
+  <meta property="article:author" content="Keiran Rowell">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Discworld 🐢❄️">
+<meta property="og:title" content="Transfer data with Globus 🌐">
+<meta property="og:url" content="http://localhost:4000/how-to/globus-data-transfer/">
+
+
+  <meta property="og:description" content="Globus  🌐📁🔀📁🌐 Globus is the modern, secure, web interface to transfer between between research endpoints. It excels at transferring huge data sets across the network, and it’s the preferred method to bring voluminous datasets onto Discworld">
+
+
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-07-02T17:27:48+10:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/how-to/globus-data-transfer/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Discworld 🐢❄️ Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    
+<nav class="skip-links" aria-label="Skip links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
+        
+        <a class="site-title" href="/">
+          Discworld 🐢❄️
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/laws/"
+                
+                
+              >Laws</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/codes/"
+                
+                
+              >Codes</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/field-guide/00-notices"
+                
+                
+              >Field Guide</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/faq"
+                
+                
+              >FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/how-to/update-cryosparc"
+                
+                
+              >How Tos</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/portal"
+                
+                
+              >Portal</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                
+                
+              >About</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/status/"
+                
+                
+              >Status</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+
+
+<div id="main" role="main">
+  
+
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/assets/images/keiran_rowell.jpg" alt="Keiran Rowell" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Keiran Rowell</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Computational Research Scientist @ Structural Biology Facility, UNSW</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="https://github.com/keiran-rowell-unsw" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+    
+      
+      
+      
+      
+    
+    
+      
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <span class="nav__sub-title">Technical How Tos</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/how-to/update-cryosparc">Updating CryoSPARC</a></li>
+            
+              <li><a href="/how-to/globus-data-transfer">Transfer data with Globus</a></li>
+            
+              <li><a href="/how-to/using-tmux">Using tmux</a></li>
+            
+          </ul>
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  
+
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Transfer data with Globus 🌐">
+    <meta itemprop="description" content="Globus  🌐📁🔀📁🌐Globus is the modern, secure, web interface to transfer between between research endpoints.It excels at transferring huge data sets across the network, and it’s the preferred method to bring voluminous datasets onto Discworld">
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/how-to/globus-data-transfer/" itemprop="url">Transfer data with Globus 🌐
+</a>
+          </h1>
+          
+
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc" aria-label="Table of contents">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#authentication">Authentication</a></li><li><a href="#-sharing-files--folders">📬 Sharing Files &amp; Folders</a></li><li><a href="#-file-management">📁 File Management</a></li><li><a href="#definitions">Definitions</a><ul><li><a href="#endpoints">endpoints</a></li><li><a href="#collections">collections</a></li><li><a href="#guest-collections">guest collections</a></li></ul></li><li><a href="#discworld-globus-details">Discworld Globus details</a><ul><li><a href="#university-storage-data-mover">University storage data mover</a></li><li><a href="#unsw-emu">UNSW-EMU</a></li><li><a href="#discworld-structbio-user-data">Discworld StructBio /User Data</a></li></ul></li><li><a href="#assistance--data-sharing">Assistance — Data Sharing</a></li></ul>
+            </nav>
+          </aside>
+        
+        <p class="notice--info"><strong>Globus</strong>  🌐📁🔀📁🌐<br />
+Globus is the modern, secure, web interface to transfer between between research <code class="language-plaintext highlighter-rouge">endpoints</code>.
+It <em>excels</em> at transferring huge data sets across the network, and it’s the preferred method to bring voluminous datasets onto Discworld</p>
+
+<h3 id="authentication">Authentication</h3>
+
+<p class="notice--warning">🔑🦁 Globus handles data access securely with your university credentials.<br /> 
+Go to <a href="app.globus.org">app.globus.org</a> and validate through your university (UNSW sign-on)</p>
+
+<p><img src="http://localhost:4000/assets/images/globus-app-unsw-sign-on.png" alt="Globus sign-on screen" /></p>
+
+<p>Everything from here on in will engage your uni identity (<code class="language-plaintext highlighter-rouge">zID</code>)</p>
+
+<p><img src="http://localhost:4000/assets/images/zID_AD-identity.png" alt="zID AD email Globus account" /></p>
+
+<p>The crown ♕ should be next to your UNSW provided identity:<br /> <strong>this is what you share with collaborators to enable data access</strong>.</p>
+
+<h3 id="-sharing-files--folders">📬 Sharing Files &amp; Folders</h3>
+
+<p>Within the Globus <code class="language-plaintext highlighter-rouge">File Manager</code> you can share a Globus <code class="language-plaintext highlighter-rouge">collection</code> with another user through the <code class="language-plaintext highlighter-rouge">Permissions</code> system.</p>
+
+<div class="guide-marquee">
+  <div class="marquee-item">
+    <img src="/assets/images/globus-permissions-01.png" alt="Globus Permissions button" />
+    <p><strong>Step 1</strong></p>
+  </div>
+  <div class="marquee-item">
+    <img src="/assets/images/globus-add-permissions-share-with-02.png" alt="Globus Add Permissions" />
+    <p><strong>Step 2</strong></p>
+  </div>
+  <div class="marquee-item">
+    <img src="/assets/images/globus-share-path-03.png" alt="Globus Path to share" />
+    <p><strong>Step 3</strong></p>
+  </div>
+  <div class="marquee-item">
+    <img src="/assets/images/globus-share-email-04.png" alt="Globus Guest share email" />
+    <p><strong>Step 4</strong></p>
+  </div>
+  <div class="marquee-item">
+    <img src="/assets/images/globus-email-message-05.png" alt="Globus email message" />
+    <p><strong>Step 5</strong></p>
+  </div>
+  <div class="marquee-item">
+    <img src="/assets/images/globus-rw-permissions-06.png" alt="Globus Read/Write permissions" />
+    <p><strong>Step 6</strong></p>
+  </div>
+</div>
+
+<style>
+  .guide-marquee {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 15px 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .marquee-item {
+    flex: 0 0 400px; /* Controls the width of each step card */
+    scroll-snap-align: start;
+    text-align: center;
+    border: 1px solid #f2f3f3;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  .marquee-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 2px;
+  }
+</style>
+
+<h3 id="-file-management">📁 File Management</h3>
+
+<p class="notice--info">🔎 Most Globus data is in publicly searchable <code class="language-plaintext highlighter-rouge">collections</code>, but their contents are locked 🔒</p>
+
+<p><img src="http://localhost:4000/assets/images/sherlock-collections.png" alt="&quot;Sherlock&quot; search ion Globus collections" /></p>
+
+<p class="notice--info">You can contact your counterpart to request they to share a particular <code class="language-plaintext highlighter-rouge">collection</code> with your Globus identity</p>
+
+<h3 id="definitions">Definitions</h3>
+<p>Globus has <a href="https://docs.globus.org/guides/overviews/collections-and-endpoints/">two core concepts</a>: the Globus <code class="language-plaintext highlighter-rouge">endpoints</code> (organisational data transfer clearing house) and the <code class="language-plaintext highlighter-rouge">collections</code> (managed datasets) within them.</p>
+
+<p>The nice thing is Globus <code class="language-plaintext highlighter-rouge">endpoints</code> are public —searchable through the <code class="language-plaintext highlighter-rouge">📁 File Manager</code>— while <code class="language-plaintext highlighter-rouge">collections</code> are private by default and you choose to share them with other uni indetities.</p>
+
+<h4 id="endpoints"><code class="language-plaintext highlighter-rouge">endpoints</code></h4>
+
+<p>This is a specific location &amp; server that manages the high-throughput data transfer work. It is set up by an organisational storage admin, so the the physical server gateway is configured for best data transfer &amp; org policies.</p>
+
+<p>The endpoint does the invisible mapping work so you can find the <code class="language-plaintext highlighter-rouge">collection</code> you are looking for.</p>
+
+<h4 id="collections"><code class="language-plaintext highlighter-rouge">collections</code></h4>
+
+<p>The collection contains raw datafrom which you can set off a <code class="language-plaintext highlighter-rouge">Transfer</code> job</p>
+
+<h4 id="guest-collections"><code class="language-plaintext highlighter-rouge">guest collections</code></h4>
+
+<p>You can <a href="https://docs.globus.org/guides/tutorials/manage-files/share-files/">Share Data Using Globus</a> without needing to touch the accounts on the underlying server.</p>
+
+<p>You do this by creating a guest collection <em>within</em> the <code class="language-plaintext highlighter-rouge">endpoint</code> your data is stored in. This is a <code class="language-plaintext highlighter-rouge">guest collection</code> that only sees your own data, and allows you to grant <code class="language-plaintext highlighter-rouge">Roles</code> to other Globus identities.</p>
+
+<p class="notice--info">Please follow the 8 steps in <a href="https://docs.globus.org/guides/tutorials/manage-files/share-files/">How To Share Data Using Globus</a> to manage your own <code class="language-plaintext highlighter-rouge">guest collection</code> and share an email invite.</p>
+
+<h3 id="discworld-globus-details">Discworld Globus details</h3>
+
+<h4 id="university-storage-data-mover">University storage data mover</h4>
+<p class="notice--info">Dedicated data mover servers exist to transfer your data onto the university central research storage solution (the <code class="language-plaintext highlighter-rouge">ESS</code>).</p>
+
+<p>While capacity is being added, transfers may be limited by total data pipeline until dedicated physical networking is configured.</p>
+
+<h4 id="unsw-emu">UNSW-EMU</h4>
+<p class="notice--info">A dedicated mapped <code class="language-plaintext highlighter-rouge">collection</code> exists that maps to <code class="language-plaintext highlighter-rouge">/data/lab/&lt;lab_name&gt;</code> to manage a lab group’s data and interface with the <code class="language-plaintext highlighter-rouge">cryotem</code> instrumentation</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Subscribed Mapped Collection (GCS) on ResTech (gd1) 
+Owner: 9d5f4d54-e4b6-4834-9122-a4bef7ef7732@clients.auth.globus.org 
+Domain: m-ff62ba.88a567.36fe.gaccess.io  
+Description: (not set)  
+Organization: The University of New South Wales (UNSW) 
+Department: EMU
+Subscription: University of New South Wales
+Keywords: (not set) 
+</code></pre></div></div>
+
+<h4 id="discworld-structbio-user-data">Discworld StructBio /User Data</h4>
+<p class="notice--info">A dedicated <code class="language-plaintext highlighter-rouge">collection</code> exists that maps to <code class="language-plaintext highlighter-rouge">/data/ess/&lt;zID&gt;</code> to cleanly structral data transfer from <em>external</em> sources to UNSW <code class="language-plaintext highlighter-rouge">zID@ad.unsw.edu.au</code> email address.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Subscribed Mapped Collection (GCS) on ResTech (gd1) 
+Owner: 9d5f4d54-e4b6-4834-9122-a4bef7ef7732@clients.auth.globus.org 
+Domain: m-XXXXXX.88a567.36fe.gaccess.io 
+Description: External Structural Biology data (crystallography, cryo, beamline, etc) endpoint for UNSW researchers 
+Organization: UNSW Mark Wainwright Analytical Centre  
+Department: Structural Biology Facility 
+Subscription: University of New South Wales
+Keywords: Discworld, MWAC, structural-biology, cryoEM, crystallography 
+</code></pre></div></div>
+
+<h3 id="assistance--data-sharing">Assistance — Data Sharing</h3>
+<p class="notice--warning">Almost all collections you share will be <code class="language-plaintext highlighter-rouge">guest collections</code> within an existing <code class="language-plaintext highlighter-rouge">mapped collection</code>.<br /><br />
+Please <a href="mailto:sbf+discworld@unsw.edu.au">contact us</a> if you’d like to access data not already in an existing collection</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+  
+
+  
+
+
+        
+
+
+
+      </footer>
+
+      
+
+      
+
+  <nav class="pagination" aria-label="Post pagination">
+    
+      <a href="#" class="pagination--pager disabled">Previous</a>
+    
+    
+      <a href="/how-to/update-cryosparc/" class="pagination--pager" title="Updating CryoSPARC">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        
+<div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        
+
+
+        
+
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://doi.org/10.26190/4KQF-M552" rel="nofollow noopener noreferrer"><i class="fa-solid fa-book-open" aria-hidden="true"></i> DOI (TBD -- please cite)</a></li>
+        
+      
+        
+          <li><a href="https://www.unsw.edu.au/research/facilities-and-infrastructure" rel="nofollow noopener noreferrer"><i class="fa-solid fa-building-columns" aria-hidden="true"></i> UNSW Research Infrastructure</a></li>
+        
+      
+        
+          <li><a href="/specs" rel="nofollow noopener noreferrer"><i class="fa-solid fa-microchip" aria-hidden="true"></i> Tech Specs</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-square-rss" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+
+<div class="page__footer-copyright">&copy; 2026 <a href="http://localhost:4000">Discworld 🐢❄️</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,552 @@
+
+
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.28.0 by Michael Rose
+  Copyright 2013-2026 Michael Rose - mademistakes.com | @mmistakes
+  Copyright 2024-2026 iBug - ibugone.com | @iBug
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js" dir="ltr">
+  <head>
+    
+<meta charset="utf-8">
+
+
+<!-- begin _includes/seo.html --><title>Updating CryoSPARC - Discworld 🐢❄️</title>
+<meta name="description" content="Introduction">
+
+
+  <meta name="author" content="Nathan Glades">
+  
+  <meta property="article:author" content="Nathan Glades">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Discworld 🐢❄️">
+<meta property="og:title" content="Updating CryoSPARC">
+<meta property="og:url" content="http://localhost:4000/how-to/update-cryosparc/">
+
+
+  <meta property="og:description" content="Introduction">
+
+
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-07-02T17:27:48+10:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/how-to/update-cryosparc/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Discworld 🐢❄️ Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    
+<nav class="skip-links" aria-label="Skip links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
+        
+        <a class="site-title" href="/">
+          Discworld 🐢❄️
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/laws/"
+                
+                
+              >Laws</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/codes/"
+                
+                
+              >Codes</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/field-guide/00-notices"
+                
+                
+              >Field Guide</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/faq"
+                
+                
+              >FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/how-to/update-cryosparc"
+                
+                
+              >How Tos</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/portal"
+                
+                
+              >Portal</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                
+                
+              >About</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/status/"
+                
+                
+              >Status</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+
+
+<div id="main" role="main">
+  
+
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/assets/images/nathan_glades.jpg" alt="Nathan Glades" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Nathan Glades</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Computational Systems Officer @ Structural Biology Facility, UNSW</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="https://github.com/nbtm-sh" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+    
+      
+      
+      
+      
+    
+    
+      
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <span class="nav__sub-title">Technical How Tos</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/how-to/update-cryosparc">Updating CryoSPARC</a></li>
+            
+              <li><a href="/how-to/globus-data-transfer">Transfer data with Globus</a></li>
+            
+              <li><a href="/how-to/using-tmux">Using tmux</a></li>
+            
+          </ul>
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  
+
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Updating CryoSPARC">
+    <meta itemprop="description" content="Introduction">
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/how-to/update-cryosparc/" itemprop="url">Updating CryoSPARC
+</a>
+          </h1>
+          
+
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc" aria-label="Table of contents">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#introduction">Introduction</a></li><li><a href="#upgrading-cryosparc">Upgrading CryoSPARC</a></li><li><a href="#troubleshooting">Troubleshooting</a><ul><li><a href="#cryosparc-is-taking-a-while-to-start">CryoSPARC is taking a while to start</a></li></ul></li></ul>
+            </nav>
+          </aside>
+        
+        <h3 id="introduction">Introduction</h3>
+
+<p>As you may know, Discworld operates per-user CryoSPARC installations. This means that you have your own CryoSPARC server that is not shared with anyone else. This has the benefit that you are able to choose when and to what version you would like your CryoSPARC instance to run.</p>
+
+<h3 id="upgrading-cryosparc">Upgrading CryoSPARC</h3>
+
+<p>If you see that an update is available, and you would like to update, follow the below steps:</p>
+
+<p>Firstly, close any currently running CryoSPARC sessions. This can be done via the web-portal by clicking the “X” button next to the “Connect” button.</p>
+
+<p><img src="http://localhost:4000/assets/images/cryosparc-connection-running.png" alt="CryoSPARC portal connection" /></p>
+
+<p>Then, connect to Discworld via the login node, and start an interactive session with a GPU. To avoid interruptions due to network connection failures, it is recommended to perform an update within a <a href="/how-to/using-tmux">Tmux session</a>.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh z3141592@discworld.analytical.unsw.edu.au
+<span class="o">[</span>z3141592@discworld0 ~]<span class="nv">$ </span>sinteractive <span class="nt">--gpu</span>
+<span class="o">[</span>z3141592@c01 ~]<span class="err">$</span>
+</code></pre></div></div>
+
+<p>Next, run the “update” command on the CryoSPARC master server. CryoSPARC should automatically start updating.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>z3141592@c01 ~]<span class="nv">$ </span>~/.local/usr/opt/cryosparc/cryosparc_master/bin/cryosparcm update
+─────────────────────────────────────────────────────────────────────────────────────
+Checking <span class="k">for </span>update...
+    current version: v5.0.0
+     latest version: v5.0.1
+Update available!
+</code></pre></div></div>
+
+<p>As CryoSPARC runs on a SLURM cluster, CryoSPARC will not automatically update it’s worker. This is done as a precaution to prevent the worker from being updated if jobs are still running. In our instance, we can be reasonably confident that no CryoSPARC jobs will be running. Within the same session, run the following commands to update the worker:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>z3141592@c01 ~]<span class="nv">$ </span><span class="nb">cp</span> ~/.local/usr/opt/cryosparc/cryosparc_master/cryosparc_worker.tar.gz ~/.local/usr/opt/cryosparc/cryosparc_worker/
+<span class="o">[</span>z3141592@c01 ~]<span class="nv">$ </span>~/.local/usr/opt/cryosparc/cryosparc_worker/bin/cryosparcw update
+─────────────────────────────────────────────────────────────────────────────────────
+Updating worker at /home/z3545907/.local/usr/opt/cryosparc/cryosparc_worker
+─────────────────────────────────────────────────────────────────────────────────────
+Checking versions...
+    current worker version: v5.0.0
+    new worker version:     v5.0.1
+Deleting old files...
+Extracting...
+</code></pre></div></div>
+
+<p>Finally, and most important, <strong>you will need to manually stop CryoSPARC</strong>. For whatever reason, updating CryoSPARC causes it to start once the update is completed. This will cause frustrating behaviour when you attempt to start CryoSPARC again via the portal. Please run the following commands to stop CryoSPARC:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>z3141592@c01 ~]<span class="nv">$ </span>~/.local/usr/opt/cryosparc/cryosparc_master/bin/cryosparcm stop
+Stopping CryoSPARC ...
+app: stopped
+app_api: stopped
+cache: stopped
+api:0: stopped
+api:1: stopped
+api:2: stopped
+command_vis: stopped
+scheduler: stopped
+database: stopped
+Shut down
+</code></pre></div></div>
+
+<p>The update is now complete. You may start CryoSPARC via the web portal.</p>
+
+<p><img src="http://localhost:4000/assets/images/cryosparc_updated.png" alt="CryoSPARC update completion alert" /></p>
+
+<h3 id="troubleshooting">Troubleshooting</h3>
+<h4 id="cryosparc-is-taking-a-while-to-start">CryoSPARC is taking a while to start</h4>
+<p>After updating CryoSPARC, it can take some time to start the database the first time. Please allow CryoSPARC some extra time to start the service. If the service has not started after 5 minutes, please see <a href="">these troubleshooting steps</a>. As always, feel free to reach out if you need assistance.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+  
+
+  
+
+
+        
+
+
+
+      </footer>
+
+      
+
+      
+
+  <nav class="pagination" aria-label="Post pagination">
+    
+      <a href="/how-to/globus-data-transfer/" class="pagination--pager" title="Transfer data with Globus 🌐">Previous</a>
+    
+    
+      <a href="/how-to/using-tmux/" class="pagination--pager" title="Using Tmux">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        
+<div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        
+
+
+        
+
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://doi.org/10.26190/4KQF-M552" rel="nofollow noopener noreferrer"><i class="fa-solid fa-book-open" aria-hidden="true"></i> DOI (TBD -- please cite)</a></li>
+        
+      
+        
+          <li><a href="https://www.unsw.edu.au/research/facilities-and-infrastructure" rel="nofollow noopener noreferrer"><i class="fa-solid fa-building-columns" aria-hidden="true"></i> UNSW Research Infrastructure</a></li>
+        
+      
+        
+          <li><a href="/specs" rel="nofollow noopener noreferrer"><i class="fa-solid fa-microchip" aria-hidden="true"></i> Tech Specs</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-square-rss" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+
+<div class="page__footer-copyright">&copy; 2026 <a href="http://localhost:4000">Discworld 🐢❄️</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

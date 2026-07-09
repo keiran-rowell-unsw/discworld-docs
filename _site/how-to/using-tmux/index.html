@@ -1,0 +1,534 @@
+
+
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.28.0 by Michael Rose
+  Copyright 2013-2026 Michael Rose - mademistakes.com | @mmistakes
+  Copyright 2024-2026 iBug - ibugone.com | @iBug
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js" dir="ltr">
+  <head>
+    
+<meta charset="utf-8">
+
+
+<!-- begin _includes/seo.html --><title>Using Tmux - Discworld 🐢❄️</title>
+<meta name="description" content="Introduction">
+
+
+  <meta name="author" content="Nathan Glades">
+  
+  <meta property="article:author" content="Nathan Glades">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Discworld 🐢❄️">
+<meta property="og:title" content="Using Tmux">
+<meta property="og:url" content="http://localhost:4000/how-to/using-tmux/">
+
+
+  <meta property="og:description" content="Introduction">
+
+
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-07-02T17:27:48+10:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/how-to/using-tmux/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Discworld 🐢❄️ Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    
+<nav class="skip-links" aria-label="Skip links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
+        
+        <a class="site-title" href="/">
+          Discworld 🐢❄️
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/laws/"
+                
+                
+              >Laws</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/codes/"
+                
+                
+              >Codes</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/field-guide/00-notices"
+                
+                
+              >Field Guide</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/faq"
+                
+                
+              >FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/how-to/update-cryosparc"
+                
+                
+              >How Tos</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/portal"
+                
+                
+              >Portal</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                
+                
+              >About</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/status/"
+                
+                
+              >Status</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+
+
+<div id="main" role="main">
+  
+
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/assets/images/nathan_glades.jpg" alt="Nathan Glades" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Nathan Glades</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Computational Systems Officer @ Structural Biology Facility, UNSW</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="https://github.com/nbtm-sh" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+    
+      
+      
+      
+      
+    
+    
+      
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <span class="nav__sub-title">Technical How Tos</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/how-to/update-cryosparc">Updating CryoSPARC</a></li>
+            
+              <li><a href="/how-to/globus-data-transfer">Transfer data with Globus</a></li>
+            
+              <li><a href="/how-to/using-tmux">Using tmux</a></li>
+            
+          </ul>
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  
+
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Using Tmux">
+    <meta itemprop="description" content="Introduction">
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/how-to/using-tmux/" itemprop="url">Using Tmux
+</a>
+          </h1>
+          
+
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc" aria-label="Table of contents">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#introduction">Introduction</a></li><li><a href="#disconnect-a-session">Disconnect a session</a></li><li><a href="#viewing-all-your-sessions">Viewing all your sessions</a></li><li><a href="#resuming-a-session">Resuming a session</a></li><li><a href="#scrolling-in-a-session">Scrolling in a session</a></li></ul>
+            </nav>
+          </aside>
+        
+        <h3 id="introduction">Introduction</h3>
+
+<p>Tmux is a command-line utility that allows shell sessions to persist between different SSH sessions. This means that you can start a Tmux session, run some command, disconnect, and the commands will continue to run in the background. You can then return to the session when you reconnect to the node.</p>
+
+<p>In the case of Discworld, Tmux is useful on the login node to contain interactive job sessions. When commands are run outside of Tmux sessions, a network disconnection can cause these programs to terminate.
+Start a new session</p>
+
+<p>The following command can be used to start a new Tmux session. The phrase my-session is the name of the session.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tmux new <span class="nt">-s</span> my-session
+</code></pre></div></div>
+
+<p>In the bottom right of your display, you should see a truncated version of you session name:
+<img src="http://localhost:4000/assets/images/my-session-tmux.png" alt="Tmux my session" /></p>
+
+<h3 id="disconnect-a-session">Disconnect a session</h3>
+
+<p>Tmux uses keyboard shortcuts to detach a session. To detach a Tmux session, you can press <code class="language-plaintext highlighter-rouge">Cntrl+b</code> to enter the Tmux command mode, then <code class="language-plaintext highlighter-rouge">d</code> to detach. You should now see yourself return to the shell you were previously in.</p>
+
+<h3 id="viewing-all-your-sessions">Viewing all your sessions</h3>
+
+<p>Tmux allows you to have more than one session. Outside of a Tmux session, you can run this command to list all your running sessions:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>z3141592@discworld0 ~]<span class="nv">$ </span>tmux <span class="nb">ls
+</span>my-session: 1 windows <span class="o">(</span>created Mon Feb  2 10:53:23 2026<span class="o">)</span>
+</code></pre></div></div>
+
+<h3 id="resuming-a-session">Resuming a session</h3>
+
+<p>You can reattach to a Tmux session using the session name. <code class="language-plaintext highlighter-rouge">my-session</code> is the name of the session created earlier. <code class="language-plaintext highlighter-rouge">a</code> is short for attach.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tmux a <span class="nt">-t</span> my-session
+</code></pre></div></div>
+
+<p>You can use a shorthand version of this command to quickly re-attach to your last attached session:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tmux a
+</code></pre></div></div>
+
+<p>You should now see your terminal show the screen of this session.</p>
+
+<h3 id="scrolling-in-a-session">Scrolling in a session</h3>
+
+<p>Similarly to detaching a session, you can use commands and keyboard shortcuts to scroll your Tmux session. Firstly, enter command mode by pressing <code class="language-plaintext highlighter-rouge">Cntrl+b</code>, then press the <code class="language-plaintext highlighter-rouge">[</code> key. In the top right, you should see the line counter.</p>
+
+<p><img src="http://localhost:4000/assets/images/tmux-line-count.png" alt="Tmux line count" /></p>
+
+<p>Once in this mode, you can use the Up, Down, Left, and Right arrow keys to move the cursor around. To exit scrolling mode, you can press the <code class="language-plaintext highlighter-rouge">q</code> key (q for quit).</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+  
+
+  
+
+
+        
+
+
+
+      </footer>
+
+      
+
+      
+
+  <nav class="pagination" aria-label="Post pagination">
+    
+      <a href="/how-to/update-cryosparc/" class="pagination--pager" title="Updating CryoSPARC">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        
+<div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        
+
+
+        
+
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://doi.org/10.26190/4KQF-M552" rel="nofollow noopener noreferrer"><i class="fa-solid fa-book-open" aria-hidden="true"></i> DOI (TBD -- please cite)</a></li>
+        
+      
+        
+          <li><a href="https://www.unsw.edu.au/research/facilities-and-infrastructure" rel="nofollow noopener noreferrer"><i class="fa-solid fa-building-columns" aria-hidden="true"></i> UNSW Research Infrastructure</a></li>
+        
+      
+        
+          <li><a href="/specs" rel="nofollow noopener noreferrer"><i class="fa-solid fa-microchip" aria-hidden="true"></i> Tech Specs</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-square-rss" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+
+<div class="page__footer-copyright">&copy; 2026 <a href="http://localhost:4000">Discworld 🐢❄️</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

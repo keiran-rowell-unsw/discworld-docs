@@ -1,0 +1,40 @@
+main:
+  - title: "Laws"
+    url: /laws/
+  - title: "Codes"
+    url: /codes/
+  - title: "Field Guide"
+    url: /field-guide/00-notices
+  - title: "FAQ"
+    url: /faq
+  - title: "How Tos"
+    url: /how-to/update-cryosparc
+  - title: "Portal"
+    url: /portal
+  - title: "About"
+    url: /about/
+  - title: "Status"
+    url: /status/
+
+field-guide-nav:
+    - title: "Discworld Field Guide"
+      children: 
+        - title: "NOTICES"
+          url: /field-guide/00-notices
+        - title: "Greetings"
+          url: /field-guide/01-greetings
+        - title: "Field Guide"
+          url: /field-guide/02-quick-guide
+
+how-to-nav:
+    - title: "Technical How Tos"
+      children: 
+        - title: "Updating CryoSPARC"
+          url: /how-to/update-cryosparc
+        - title: "Transfer data with Globus"
+          url: /how-to/globus-data-transfer
+        - title: "Using tmux"
+          url: /how-to/using-tmux
+        - title: "Clean up Intermediate Data"
+          url: /how-to/data-cleanup
+
