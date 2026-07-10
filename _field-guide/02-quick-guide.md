@@ -95,7 +95,7 @@ We provide a `saferm` that will ask for confirmation, if you're a beginner. **Do
 👋 `exit` (or `quit`) will get your out of most programs, including logout from Discworld<br>
 
 📃 `list -al` will give you *all* files, including ones hidden by the magic `.` in front<br> 
-It *also* shows `permissions`: who can `read`, `write` (hence overwrite/<span style="color: #FF0E0E;">delete</span>), `execute` (run) files
+It *also* shows `permissions`: who can `read`, `write` [hence overwrite/<span style="color: #FF0E0E;">delete</span>], `execute` [run] files
 
 <code><span style="color: #A3BE8C;">r</span><span style="color: #D08770;">w</span><span style="color: #EBCB8B;">x</span><span style="color: #8FBCBB;">r</span><span style="color: #BF616A;">w</span><span style="color: #B48EAD;">x</span><span style="color: #5E81AC;">r</span><span style="color: #81A1C1;">w</span><span style="color: #88C0D0;">x</span> size <span style="color: #818589;">username</span> <span style="color: #4682B4;">date</span> <span style="color: #B2BEB5;">filename</span></code>
 <br>&nbsp;&nbsp;`u` `g` `o`
@@ -111,7 +111,7 @@ You can control the permissions (of your own stuff):
 - `chmod` – change (file) mode. One of the `ch` change commands; to change file `permissions` 
 - `chmod` works on the corresponding `u`,`g`,`o` letters I've listed under the left-listed permissions 
 
-Use `chmod+` to add permisions, `chmod-` to remove, `chmod=` to set them to something new<br>
+Use `chmod+` to add permisions, `chmod-` to subtract, `chmod=` to set them to something new<br>
 `chmod g-r myfile` will remove the ability for anyone in the `group` to read that file.
 {: .notice--info}
 
