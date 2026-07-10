@@ -234,6 +234,9 @@ Batch job files are just `shell` `commands` with info for resources at the top.<
 - `sacct` --- print accounting for you jobs' resource usage
 - `squeue` - see the state of your job in the queue. 
 
+![squeue example on Discworld](/assets/images/squeue-colourised.jpg)
+
+
 See [STATE CODES](https://slurm.schedmd.com/job_state_codes.html), `R` is running `PD` pending 👍
 {: .notice--info}
 
