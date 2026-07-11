@@ -83,7 +83,7 @@ We provide a `saferm` that will ask for confirmation, if you're a beginner. **Do
 🏠 `cd /home` = `cd ~`; takes you home quickly<br>
 ↩️ `cd -` will take you back to the last folder you were in<br>
 ⬆️ Up arrow (`↑`) goes back through your shell commands<br>
-📍 `whereami` prints the working directory (the one your command line prompt is in) <br>
+📍 `whereami` (_AKA_ `pwd`) prints the working directory (the one your command line prompt is in) <br>
 ❔ `which` tells you where a `program` is located. You can then tell the other programs
 
 `which` is useful <u>after loading</u> a program. _e.g._ `module load sbgrid/relion` <br>
