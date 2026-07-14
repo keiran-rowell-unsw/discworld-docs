@@ -100,12 +100,12 @@ It *also* shows `permissions`: who can `read`, `write` (hence overwrite/<span st
 <code><span style="color: #A3BE8C;">r</span><span style="color: #D08770;">w</span><span style="color: #EBCB8B;">x</span><span style="color: #8FBCBB;">r</span><span style="color: #BF616A;">w</span><span style="color: #B48EAD;">x</span><span style="color: #5E81AC;">r</span><span style="color: #81A1C1;">w</span><span style="color: #88C0D0;">x</span> size <span style="color: #818589;">username</span> <span style="color: #4682B4;">date</span> <span style="color: #B2BEB5;">filename</span></code>
 <br>&nbsp;&nbsp;`u` `g` `o`
 
-Be very careful who you  share **'group' or 'other' write access** with
-{: .notice--danger} 
-
 In the above <span style="color: #A3BE8C;">read</span>/<span style="color: #D08770;">write</span>/<span style="color: #EBCB8B;">execute</span> letters are grouped first-to-last by `user`, `group` and `other`
 - `group` will typically your lab group, but can be made from any collection of `users`
 - `other` is _anyone_ else on Discworld!
+
+Be very careful who you  share **'group' or 'other' write access** with
+{: .notice--danger} 
 
 You can control the permissions (of your own stuff):
 - `chmod` – change (file) mode. Another `ch` command; to change file `permissions` 
@@ -115,7 +115,7 @@ Use `chmod+` to add permisions, `chmod-` to remove, `chmod=` to set them to some
 `chmod g-r myfile` will remove the ability for anyone in the `group` to read that file.
 {: .notice--info}
 
-🕐 `list -snew` will sort your files by the newest ones accessed<br>
+🕐 `list -snew` will sort your files by the `new`est ones accessed<br>
 🃏 `*` is the ‘wildcard’ and will fill in the slots letters should be:<br> 
 
 `cryo*` matches `cryosparc`, `cryoEM`, `cryo-EM`, `cryotomo`, `cryogenic_hibernation_capsule`, _and so on_. 
