@@ -25,7 +25,7 @@ These ways of accessing the GPUs serve different purposes:
 
 2. Involves some learning and involves installing a suitable terminal on your laptop, but is *far* more flexible and opens up the possibility of more powerful calculations, ‘set-and-forget’ longer running jobs, and more effective job queuing and control.
 
-To access the webportal, go to [portal.discworld.analytical.unsw.edu.au](http://portal.discworld.analytical.unsw.edu.au)
+**To access the webportal**: go to [portal.discworld.analytical.unsw.edu.au](http://portal.discworld.analytical.unsw.edu.au)
 
 **To login to Discworld** through the terminal:
 
@@ -68,11 +68,11 @@ The first hurdle is learning to work with your files *without clicking on them.*
   
 Basic navigation and file movement commands are: `ls`, `pwd`, `mkdir`, `cd`, `cp`, `mv`, `rm`, `grep`
 
-If those seem to be missing letters, that’s because they *are*. You’ll end up typing so often you don’t want to spell out `list ./my_data` or `print-working-directory` over & over again. 
+If those seem to be missing letters, that’s because they *are*. You’ll type so often you don’t want to spell out `list ./my_data`, `change-directory ./images`, or `print-working-directory` over & over. 
 
 `rm` is DANGEROUS. It is a COMPLETE DELETION.
 {: .notice--danger}
-We provide a `saferm` that will ask for confirmation, if you're a beginner. **Don't get used to it**, other systems will _immediately_ execute a delete and the file will be gone. 
+We provide a `saferm` that will ask for confirmation, if you're a beginner. **Don't get used to it**, other systems will _immediately_ execute a delete and the file will be <u>gone</u>. 
 {: .notice--success}
 
 
@@ -83,19 +83,19 @@ We provide a `saferm` that will ask for confirmation, if you're a beginner. **Do
 🏠 `cd /home` = `cd ~`; takes you home quickly<br>
 ↩️ `cd -` will take you back to the last folder you were in<br>
 ⬆️ Up arrow (`↑`) goes back through your shell commands<br>
-📍 `whereami` prints the working directory (the one your command line prompt is in) <br>
+📍 `whereami` (_AKA_ `pwd`) prints the working directory (the one your command line prompt is in) <br>
 ❔ `which` tells you where a `program` is located. You can then tell the other programs
 
-`which` is useful after loading a program. _e.g._ `module load sbgrid/relion` <br>
-`which relion` then gives a full `path` often nested according to software details: `/programs/x86_64-linux/relion/5.0.0_cu12.2/bin.capsules/relion`
+`which` is useful <u>after loading</u> a program. _e.g._ `module load sbgrid/relion` <br>
+`which relion` then gives a full `path` often nested according to software details:<br> `/programs/x86_64-linux/relion/5.0.0_cu12.2/bin.capsules/relion`
 {: .notice--info}
 
 ⏪ `Cntrl + r` starts a ‘reverse search’; lets you search for old commands by a particular word<br>
 🚫 `Cntrl + c` cancels whatever action you were doing<br>
 👋 `exit` (or `quit`) will get your out of most programs, including logout from Discworld<br>
 
-📃 `list -al` will give you *all* files, including the ones hidden by the magic `.` in front<br> 
-It *also* shows `permissions`: who can `read`, `write` (hence overwrite/<span style="color: #FF0E0E;">delete</span>), run/`execute` files
+📃 `list -al` will give you *all* files, including ones hidden by the magic `.` in front<br> 
+It *also* shows `permissions`: who can `read`, `write` [hence overwrite/<span style="color: #FF0E0E;">delete</span>], `execute` [run] files
 
 <code><span style="color: #A3BE8C;">r</span><span style="color: #D08770;">w</span><span style="color: #EBCB8B;">x</span><span style="color: #8FBCBB;">r</span><span style="color: #BF616A;">w</span><span style="color: #B48EAD;">x</span><span style="color: #5E81AC;">r</span><span style="color: #81A1C1;">w</span><span style="color: #88C0D0;">x</span> size <span style="color: #818589;">username</span> <span style="color: #4682B4;">date</span> <span style="color: #B2BEB5;">filename</span></code>
 <br>&nbsp;&nbsp;`u` `g` `o`
@@ -108,10 +108,10 @@ Be very careful who you  share **'group' or 'other' write access** with
 {: .notice--danger} 
 
 You can control the permissions (of your own stuff):
-- `chmod` – change (file) mode. Another `ch` command; to change file `permissions` 
+- `chmod` – change (file) mode. One of the `ch` change commands; to change file `permissions` 
 - `chmod` works on the corresponding `u`,`g`,`o` letters I've listed under the left-listed permissions 
 
-Use `chmod+` to add permisions, `chmod-` to remove, `chmod=` to set them to something new<br>
+Use `chmod+` to add permisions, `chmod-` to subtract, `chmod=` to set them to something new<br>
 `chmod g-r myfile` will remove the ability for anyone in the `group` to read that file.
 {: .notice--info}
 
@@ -121,7 +121,7 @@ Use `chmod+` to add permisions, `chmod-` to remove, `chmod=` to set them to some
 `cryo*` matches `cryosparc`, `cryoEM`, `cryo-EM`, `cryotomo`, `cryogenic_hibernation_capsule`, _and so on_. 
 {: .notice--info}
 
-`*` is handy, but be careful.
+`*` is handy, but <u>be careful</u>.
 {: .notice--warning}
 
 📦 `disk-use` shows you the ‘disk usage’ of a folder – that is, where all the file storage is going<br>
@@ -130,6 +130,10 @@ Use `chmod+` to add permisions, `chmod-` to remove, `chmod=` to set them to some
 
 ---
 
+📝 `edit` will open a file you can 'just type' into: `edit my_file.txt` 
+
+Control+S to save, Control+Q to quit.
+{: .notice--info}
 🐈(👁️) `cat` (also linked as `show`) is used to show a file on the terminal: `cat file`. 
 
 It’s give that nickname because you can con**cat**enate two files together with it `cat file1 file2 > file3`
@@ -139,16 +143,16 @@ It’s give that nickname because you can con**cat**enate two files together wit
 {: .notice--info}
 🔚 `tail --follow` live view of the bottom of a file
 
-Very useful for `slurm-<jobID>.out` job log progress
+Very useful for `tail --follow slurm-<jobID>.out` job log progress
 {: .notice--info}
 
-✘✓ `find-replace` is done by `sd` (newer `sed`), it modifies the file ‘live’<br> `sd old_word new_word file.txt`<br>
+✘✓ `find-replace` is done by  the `sd` program (newer `sed`), it modifies the file ‘live’<br> `sd old_word new_word file.txt`<br>
 
 Be sure to save a copy before running a ‘find-replace’, *e.g.* with `cp file file.bak`
 {: .notice--warning}
 
 ↩️  `extract` unpacks all sorts of compressed files<br> 
-↪️  `compress` creates a the standard Linux compressed file format (`.tar.gz`)<br>
+↪️  `compress` creates the standard Linux compressed file format (`.tar.gz`)<br>
 ↔️ `difference` finds the different *lines* between two files (*i.e.* what changed?)<br>
 🔺 `delta` compare two files on a *character* level<br>
 ✂️ `cut` & `paste` are useful to work segments of files. **Be sure to back up**<br>
@@ -166,29 +170,29 @@ Even more helpfully, you can read what the commands do while in the command line
 `tldr` --- **Too long; didn’t read** 📃
 {: .notice--success}
 
-We have installed the **user-friendly** ‘too long didn’t read' community manuals. `tldr command` will provide one line on what the command does and use examples. If you want a complete manual of a command it’s: `man command`.
+We have installed the **user-friendly** ‘too long didn’t read' community manuals. `tldr command` will provide one line on what the command does and usage examples. If you want a complete manual of a command it’s: `man command`.
 
 🥱 **_Please_ don't ‘tl;dr’ this guide, or the manual pages** 
 The manual pages examples will often tell you what you need for simple uses without having to wait for an admin to become free.
 {: .notice--danger}
 
-Most command line tools you can also add `--help` after them to see what they do.
+WMost command line tools also self-document, you add `--help` after them to see what they do.
 {: .notice--info}
 
 ---
 
 #### Basic command line (`zsh`) shell improvements.
 
-We’ve moved to a modern user-friendly shell by default. This gives you colours, autocomplete _etc_. For `command shell scripts` from elsewherei, you will need to tell the command prompt to run the older shell:  `bash script.sh`  
+We’ve moved to a modern user-friendly shell by default _for the login experiecne_. This gives you colours, autocomplete _etc_. For `command shell scripts` from elsewhere, you will need to tell the command prompt to run the standard shell:  `bash script.sh`  
 We’ve but `hello_discworld.sh` in your `/home`, you’ll see it specifies at the top that it uses `bash` to run the script. 
 
-Have a try with `bash hello_discworld.sh` on the command line, since it’s tiny. <u>Please queue big `program`s.</u>
+Have a try with `bash hello_discworld.sh` on the command line, since it’s tiny. <u>Please queue big programs</u>
 {: .notice--info}
 
 
-If you really don’t like `zsh` you can ask us to change your default shell with `chsh` ('change shell')
-
-🦀 We’ve swapped some classic `commands` for new ones. For example `du` ('disk usage') secretly runs the `dust` ('disk usage [programmed in rust]') implementation through `aliases` (how we gave you custom `command`s).  
+If you really don’t like `zsh` you can ask us to change your default shell with `chsh` ('change shell')<br>
+🦀 We’ve swapped some classic `commands` for new ones. For example `disk-use` secretly runs the `dust` program (a modern 'disk use' [`du`] reporting tool programmed in [Rust](https://rust-lang.org/))'.<br>
+This swapped is implemented through `aliases` in your shell settings (how we gave you custom `command`s).<br>
 We think these are nicer and faster, but if you want to change any of these substitutions, feel free to edit your personal aliases <https://www.howtogeek.com/439736/how-to-create-aliases-and-shell-functions-on-linux/>
 {: .notice--success}
 
@@ -200,11 +204,13 @@ We think these are nicer and faster, but if you want to change any of these subs
   
 What’s nice is you can easily share scripts from others and make your own, check out:   
 `python fasta_fixed-width_to_single-line.py --help`  
+
 It uses the powerful international [BioPython](https://biopython.org/) module that understands biological files in a cleanly.
+{: .notice--sucess}
 
 ---
 
-#### Discworld standard `s`cheduler and custom ‘helper’ commands
+#### Discworld common `s`cheduler job queueing commands 
 
 Since all our users are doing CryoEM work, our admin team have set up some automated scripts that can be called as if they were out-of-the box shell commands. Standard scheduler commands remain
 
@@ -213,7 +219,7 @@ Since all our users are doing CryoEM work, our admin team have set up some autom
 This is done [through the portal](/portal)
 {: .notice--info}
 
-- `sdraft [job_name]` --- custom Discworld script; directly edits a **batch job** template
+- `sdraft [job_name]` --- custom Discworld script; directly `edit`s a **batch job** template
    
 Batch job files are just `shell` `commands` with info for resources at the top.<br> We can call them `[job_name].slurm` to keep track of what you want to run. Discworld will colour them.
 {: .notice--info}
@@ -227,6 +233,9 @@ Batch job files are just `shell` `commands` with info for resources at the top.<
 
 - `sacct` --- print accounting for you jobs' resource usage
 - `squeue` - see the state of your job in the queue. 
+
+![squeue example on Discworld](/assets/images/squeue-colourised.jpg)
+
 
 See [STATE CODES](https://slurm.schedmd.com/job_state_codes.html), `R` is running `PD` pending 👍
 {: .notice--info}
@@ -270,7 +279,7 @@ The Electron Microscopy Unit gathers & manages the raw data from the instruments
 - **Finalised 3D maps** – these should be deposited in the appropriate scientific database (*e.g.* [EMPIAR](https://www.ebi.ac.uk/empiar/)) and/or deposited to [UNSW’s Research Data Archive](https://www.dataarchive.unsw.edu.au/) ‘glacial’ storage. The Data Archive is managed under your supervisor’s [Research Data Management Plan](https://www.dataarchive.unsw.edu.au/help/rdmp-and-data-archive).
 - ⁉️ **Unsure?** - Doesn’t fit the above classes? <br>Contact an admin at [sbf+discworld@unsw.edu.au](mailto:sbf+discworld@unsw.edu.au)<br> For hard classification cases talk to [UNSW Research Data Management support team](mailto:RDM@unsw.edu.au)
 
-🌐 **Globus [In Development]** - UNSW has a [Globus](https://app.globus.org/) site license. Globus excels at large data transfers, and makes data points discoverable (like EM data connected at another Facility). Please use the Globus portal and all the data sharing permissions it grants you. It has many nifty features.
+🌐 **Globus [see How To](/how-to/globus-data-transfer)** - UNSW has a [Globus](https://app.globus.org/) site license. Globus excels at large data transfers, and makes data points discoverable (like EM data connected at another Facility). Please use the Globus portal and all the data sharing permissions it grants you. It has many nifty features.
 {: .notice--success}
 
 
@@ -322,3 +331,4 @@ Please try to be patient and respectful with our administration and development 
 <a href="#" class="btn btn--info">STABLE</a>
 
 <a href="#" class="btn btn--success">NEW AND WORKING</a>
+

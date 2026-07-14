@@ -17,7 +17,7 @@ tmux new -s my-session
 ```
 
 In the bottom right of your display, you should see a truncated version of you session name:
-![Tmux my session]({{ site.url }}{{ site.baseurl }}/assets/images/my-session-tmux.png)
+![Tmux my session](/assets/images/my-session-tmux.png)
 
 
 ### Disconnect a session
@@ -54,6 +54,6 @@ You should now see your terminal show the screen of this session.
 
 Similarly to detaching a session, you can use commands and keyboard shortcuts to scroll your Tmux session. Firstly, enter command mode by pressing `Cntrl+b`, then press the `[` key. In the top right, you should see the line counter.
 
-![Tmux line count]({{ site.url }}{{ site.baseurl }}/assets/images/tmux-line-count.png) 
+![Tmux line count](/assets/images/tmux-line-count.png) 
 
 Once in this mode, you can use the Up, Down, Left, and Right arrow keys to move the cursor around. To exit scrolling mode, you can press the `q` key (q for quit).

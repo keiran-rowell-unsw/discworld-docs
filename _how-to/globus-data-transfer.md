@@ -35,11 +35,11 @@ It _excels_ at transferring huge data sets across the network, and it's the pref
 Go to [app.globus.org](app.globus.org) and validate through your university (UNSW sign-on)
 {: .notice--warning}
 
-![Globus sign-on screen]({{ site.url }}{{ site.baseurl }}/assets/images/globus-app-unsw-sign-on.png)
+![Globus sign-on screen](/assets/images/globus-app-unsw-sign-on.png)
 
 Everything from here on in will engage your uni identity (`zID`)
 
-![zID AD email Globus account]({{ site.url }}{{ site.baseurl }}/assets/images/zID_AD-identity.png)
+![zID AD email Globus account](/assets/images/zID_AD-identity.png)
 
 The crown ♕ should be next to your UNSW provided identity:<br> **this is what you share with collaborators to enable data access**. 
 
@@ -106,7 +106,7 @@ Within the Globus `File Manager` you can share a Globus `collection` with anothe
 {: .notice--info}
 
 
-!["Sherlock" search ion Globus collections]({{ site.url }}{{ site.baseurl }}/assets/images/sherlock-collections.png)
+!["Sherlock" search ion Globus collections](/assets/images/sherlock-collections.png)
 
 You can contact your counterpart to request they to share a particular `collection` with your Globus identity
 {: .notice--info}
