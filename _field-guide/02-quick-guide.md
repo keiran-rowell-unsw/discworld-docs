@@ -115,7 +115,7 @@ Use `chmod+` to add permisions, `chmod-` to subtract, `chmod=` to set them to so
 `chmod g-r myfile` will remove the ability for anyone in the `group` to read that file.
 {: .notice--info}
 
-🕐 `list -snew` will sort your files by the `new`est ones accessed<br>
+🕐 `list -snew` will `s`ort your files by the `new`est ones accessed<br>
 🃏 `*` is the ‘wildcard’ and will fill in the slots letters should be:<br> 
 
 `cryo*` matches `cryosparc`, `cryoEM`, `cryo-EM`, `cryotomo`, `cryogenic_hibernation_capsule`, _and so on_. 
@@ -210,7 +210,8 @@ It uses the powerful international [BioPython](https://biopython.org/) module th
 
 ---
 
-#### Discworld common `s`cheduler job queueing commands 
+#### Discworld common `s`cheduler job queueing commands ⏱️ 
+{: data-toc="⏱️ Job scheduling"}
 
 Since all our users are doing CryoEM work, our admin team have set up some automated scripts that can be called as if they were out-of-the box shell commands. Standard scheduler commands remain
 
@@ -246,7 +247,7 @@ See [STATE CODES](https://slurm.schedmd.com/job_state_codes.html), `R` is runnin
 ---
 
 ### Requesting resources 🫲
-{: data-toc="⏱️ Job scheduling"}
+{: data-toc="🫲 Requesting resources"}
 
 🤖 Just ask for what you need, with a bit of overhead so your job won’t run out of time or RAM
 {: .notice--warning}
