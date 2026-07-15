@@ -79,7 +79,8 @@ We provide a `saferm` that will ask for confirmation, if you're a beginner. **Do
 ---
 #### Discworld `command` shortcuts
 
-These are non-standard commands to help you get started. You can see what the 'true' `command` is running `type command` in your shell
+These are <u>non-standard commands</u> to help you get started.<br> 
+You can see what the 'true' `command` is running `type command` in your shell
 {: .notice--warning}
 
 📂 Folders are called `directories` in Linux land  
