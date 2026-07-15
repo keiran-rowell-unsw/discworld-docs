@@ -78,6 +78,10 @@ We provide a `saferm` that will ask for confirmation, if you're a beginner. **Do
 
 ---
 #### Discworld `command` shortcuts
+
+These are non-standard commands to help you get started. You can see what the 'true' `command` is running `type command` in your shell
+{: .notice--warning}
+
 📂 Folders are called `directories` in Linux land  
 🧭 `paths` are as `/full/path/to/file`. The slashes `/` separate folders, like in your file browser. <br>There are some shorthands: `.`=‘here’, `./`=‘here folder’, `../`=‘folder above’, `~`='home folder'<br>
 🏠 `cd /home` = `cd ~`; takes you home quickly<br>
