@@ -188,7 +188,7 @@ WMost command line tools also self-document, you add `--help` after them to see 
 
 #### Basic command line (`zsh`) shell improvements.
 
-We’ve moved to a modern user-friendly shell by default _for the login experiecne_. This gives you colours, autocomplete _etc_. For `command shell scripts` from elsewhere, you will need to tell the command prompt to run the standard shell:  `bash script.sh`  
+We’ve moved to a modern user-friendly shell by default _for the login experience_. This gives you colours, autocomplete _etc_. For `command shell scripts` from elsewhere, you will need to tell the command prompt to run the standard shell:  `bash script.sh`  
 We’ve but `hello_discworld.sh` in your `/home`, you’ll see it specifies at the top that it uses `bash` to run the script. 
 
 Have a try with `bash hello_discworld.sh` on the command line, since it’s tiny. <u>Please queue big programs</u>
