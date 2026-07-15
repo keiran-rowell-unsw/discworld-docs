@@ -7,4 +7,4 @@ classes: wide
 
 🤖 _Bleep-bloop_ under construction
 
-**Funding & Human Acknowledgements**:
+** Human Acknowledgements & Funding **:

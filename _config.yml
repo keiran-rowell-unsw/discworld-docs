@@ -14,8 +14,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Discworld 🐢❄️
-url: "https://www.unsw.edu.au/research/facilities-and-infrastructure" 
-base_url: "/discworld-docs"
+url: "https://docs.discworld.unsw.edu.au" 
+baseurl: ""
 email: sbf+discworld@unsw.edu.au
 description: >- # this means to ignore newlines until "baseurl:"
   Discworld is a bespoke computational cluster for processing biostructural raw data. Specialities: Cryo-Electron Microscopy, Cryo-Tomography. 
@@ -62,7 +62,7 @@ author:
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "discworld-docs.github.io"
+      url: "https://docs.discworld.unsw.edu.au"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/unsw-edu-au"
