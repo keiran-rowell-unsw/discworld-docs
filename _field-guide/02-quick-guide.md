@@ -97,7 +97,7 @@ You can see what the 'true' `command` is running `type command` in your shell
 
 ⏪ `Cntrl + r` starts a ‘reverse search’; lets you search for old commands by a particular word<br>
 🚫 `Cntrl + c` cancels whatever action you were doing<br>
-👋 `exit` (or `quit`) will get your out of most programs, including logout from Discworld<br>
+👋 `exit` (or `quit`, sometimes just typing `q`) will get your out of most programs, including logout from Discworld<br>
 
 📃 `list -al` will give you *all* files, including ones hidden by the magic `.` in front<br> 
 It *also* shows `permissions`: who can `read`, `write` [hence overwrite/<span style="color: #FF0E0E;">delete</span>], `execute` [run] files
